@@ -1,24 +1,39 @@
+import 'decimal_to_binary.dart';
 import 'delimiters_calculator.dart';
 
 void main() {
-  // First task
+  // FIRST TASK
+  final delimiterCalc = DelimiterCalculator();
+
   // Greatest  common divisor
   int firstNumGcd = 15;
   int secondNumGcd = 20;
-  final delimiterCalc = DelimiterCalculator();
-  int divisor1 = delimiterCalc.gcd(firstNumGcd, secondNumGcd);
-  print('Greatest common divisor for 15 and 20: $divisor1');
+  print(
+      'Greatest common divisor for $firstNumGcd and $secondNumGcd: ${delimiterCalc.gcd(firstNumGcd, secondNumGcd)}');
 
-  // Leasst common multiple
+  // Least common multiple
   int firstNumLcm = 15;
   int secondNumLcm = 25;
-  int multiple1 = delimiterCalc.lcm(firstNumLcm, secondNumLcm);
-  print('Least common multiple for 15 and 30: $multiple1');
+  print(
+      'Least common multiple for $firstNumLcm and $secondNumLcm: ${delimiterCalc.lcm(firstNumLcm, secondNumLcm)}');
 
   // Simple multipliers
   int multipliersVal = 120;
-  List<int> multipliersRes =
-      delimiterCalc.simpleMultipliers(multipliersVal, null, null);
-  print('Simple multipliers for $multipliersVal:');
-  print(multipliersRes);
+  print(
+      'Simple multipliers for $multipliersVal: ${delimiterCalc.simpleMultipliers(multipliersVal, null, null)}');
+  // FIRST TASK END
+
+  // SECOND TASK
+  final decimalConverter = DecimalConverter();
+  // Convert  decimal to binary
+  int decimalToConvert = 246;
+  print(
+      '$decimalToConvert to binary is ${decimalConverter.convertToBinary(decimalToConvert, null)}');
+
+  // Convert binary to decimal
+  // String binaryToConvert = '10011011';
+  String binaryToConvert = '11110110';
+  print(
+      '$binaryToConvert to decimal is ${decimalConverter.convertToDecimal(binaryToConvert)}');
+  // SECOND TASK END
 }

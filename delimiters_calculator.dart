@@ -1,6 +1,5 @@
 class DelimiterCalculator {
   // DelimiterCalculator();
-
   int gcd(int a, int b) {
     int temp;
 
@@ -14,7 +13,7 @@ class DelimiterCalculator {
   }
 
   int lcm(int a, int b) {
-    return ((a / this.gcd(a, b)) * b).toInt();
+    return ((a / gcd(a, b)) * b).toInt();
   }
 
   List<int> simpleMultipliers(int a, int? divisor, List<int>? multipliers) {
