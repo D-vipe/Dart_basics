@@ -64,4 +64,63 @@ void main() {
 
   print(' ');
   print(' ');
+
+  // FOURTH TASK
+  print('===== FOURTH TASK =====');
+  List<String> collectionExample4 = [
+    'hey',
+    'yoU',
+    'Bro',
+    'tickle',
+    'анчоус',
+    'hey',
+    'you',
+    'bro',
+    'tickle',
+    'анчоус',
+    'hey',
+    'you',
+    'bro',
+    'tickle',
+    'анчоус',
+    'bro',
+    'bRo',
+    'Tickle',
+  ];
+  print(
+      'Counting times words are encounterd in the following list: $collectionExample4 ....');
+  print('the result: ${numHelper.countRepeatedWords(collectionExample4)}');
+  print('===== FOURTH TASK END =====');
+  // FOURTH TASK END
+
+  print(' ');
+  print(' ');
+
+  // FIFTH TASK
+  print('===== FIFTH TASK =====');
+  List<String> collectionExample5 = [
+    'one',
+    'yoU',
+    'four',
+    'два',
+    'cat',
+    'hey',
+    'fish',
+    'zero',
+    'zero',
+    'ноль',
+    'three',
+    'seven',
+    'eight',
+    'шесть',
+    'car',
+    'newspaper',
+    '1',
+    '9',
+  ];
+  print(
+      'Searching distinct numbers in the following list: $collectionExample5 ....');
+  print('the result: ${numHelper.searchDistinctNumbers(collectionExample5)}');
+  print('===== FIFTH TASK END =====');
+  // FIFTH TASK END
 }
