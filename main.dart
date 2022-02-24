@@ -1,8 +1,13 @@
 import 'decimal_to_binary.dart';
 import 'delimiters_calculator.dart';
+import 'num_helper.dart';
 
 void main() {
+  print(' ');
+  print(' ');
+
   // FIRST TASK
+  print('===== FIRST TASK =====');
   final delimiterCalc = DelimiterCalculator();
 
   // Greatest  common divisor
@@ -21,9 +26,14 @@ void main() {
   int multipliersVal = 120;
   print(
       'Simple multipliers for $multipliersVal: ${delimiterCalc.simpleMultipliers(multipliersVal, null, null)}');
+  print('===== FIRST TASK END =====');
   // FIRST TASK END
 
+  print(' ');
+  print(' ');
+
   // SECOND TASK
+  print('===== SECOND TASK =====');
   final decimalConverter = DecimalConverter();
   // Convert  decimal to binary
   int decimalToConvert = 246;
@@ -35,5 +45,23 @@ void main() {
   String binaryToConvert = '11110110';
   print(
       '$binaryToConvert to decimal is ${decimalConverter.convertToDecimal(binaryToConvert)}');
+  print('===== SECOND TASK END =====');
   // SECOND TASK END
+
+  print(' ');
+  print(' ');
+
+  // THIRD TASK
+  print('===== THIRD TASK =====');
+  final numHelper = NumHelper();
+  String findNums1 = 'croc mango 1 1.2 5 111.5 bash profile';
+  // String findNums1 = 'croc mango tangerine bash profile';
+
+  List<num> res = numHelper.searchStringNumbers(findNums1);
+  print('$findNums1 searching numbers: ${res.length > 0 ? res : 'no results'}');
+  print('===== THIRD TASK END =====');
+  // THIRD TASK END
+
+  print(' ');
+  print(' ');
 }
