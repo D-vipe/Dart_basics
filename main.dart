@@ -1,21 +1,25 @@
 import 'decimal_to_binary.dart';
 import 'delimiters_calculator.dart';
 import 'num_helper.dart';
+import 'point.dart';
 
 void main() {
+  final delimiterCalc = DelimiterCalculator();
+  final numHelper = NumHelper();
+  final decimalConverter = DecimalConverter();
+  final pointClass = Point(10, 15, 12);
+
   print(' ');
   print(' ');
 
   // FIRST TASK
   print('===== FIRST TASK =====');
-  final delimiterCalc = DelimiterCalculator();
 
   // Greatest  common divisor
   int firstNumGcd = 15;
   int secondNumGcd = 20;
   print(
       'Greatest common divisor for $firstNumGcd and $secondNumGcd: ${delimiterCalc.gcd(firstNumGcd, secondNumGcd)}');
-
   // Least common multiple
   int firstNumLcm = 15;
   int secondNumLcm = 25;
@@ -34,7 +38,6 @@ void main() {
 
   // SECOND TASK
   print('===== SECOND TASK =====');
-  final decimalConverter = DecimalConverter();
   // Convert  decimal to binary
   int decimalToConvert = 246;
   print(
@@ -53,7 +56,6 @@ void main() {
 
   // THIRD TASK
   print('===== THIRD TASK =====');
-  final numHelper = NumHelper();
   String findNums1 = 'croc mango 1 1.2 5 111.5 bash profile';
   // String findNums1 = 'croc mango tangerine bash profile';
 
@@ -123,4 +125,16 @@ void main() {
   print('the result: ${numHelper.searchDistinctNumbers(collectionExample5)}');
   print('===== FIFTH TASK END =====');
   // FIFTH TASK END
+
+  print(' ');
+  print(' ');
+
+  // SIXTH TASK
+  print('===== SIXTH TASK =====');
+  final distanceBetween = pointClass.distanceTo(Point(0, 2, 0));
+  print('Distance between: $distanceBetween');
+  print(
+      'Triangle square: ${pointClass.calcTriangleSquare(Point(10, 0, 1.5), Point(0, 2, 3), Point(0, 0, 0))}');
+  print('===== SIXTH TASK END =====');
+  // SIXTH TASK END
 }
