@@ -2,6 +2,7 @@ import 'decimal_to_binary.dart';
 import 'delimiters_calculator.dart';
 import 'num_helper.dart';
 import 'point.dart';
+import 'extensions.dart';
 
 void main() {
   final delimiterCalc = DelimiterCalculator();
@@ -137,4 +138,23 @@ void main() {
       'Triangle square: ${pointClass.calcTriangleSquare(Point(10, 0, 1.5), Point(0, 2, 3), Point(0, 0, 0))}');
   print('===== SIXTH TASK END =====');
   // SIXTH TASK END
+
+  print(' ');
+  print(' ');
+
+  // SEVENTh TASK
+  print('===== SEVENTh TASK =====');
+  int degree = 3;
+  double randomNum = 125;
+  try {
+    print(
+        '$degree root of $randomNum is ${randomNum.mathRoot(degree, randomNum)}');
+  } on ArgumentError catch (e) {
+    print(e.message);
+  } catch (e) {
+    print('Exception was thrown');
+  }
+
+  print('===== SEVENTh TASK END =====');
+  // SEVENTh TASK END
 }

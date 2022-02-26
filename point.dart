@@ -7,14 +7,12 @@ class Point {
 
   Point(this.x, this.y, this.z);
 
-  Point.zero()
-      : x = 0,
-        y = 0,
-        z = 0;
-  Point.unitVector()
-      : x = 1,
-        y = 1,
-        z = 1;
+  factory Point.zero() {
+    return Point(0, 0, 0);
+  }
+  factory Point.unitVector() {
+    return Point(1, 1, 1);
+  }
 
   double distanceTo(Point anotherPoint) {
     return this._privateDistanceTo(this, anotherPoint);
