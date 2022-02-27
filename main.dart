@@ -3,6 +3,7 @@ import 'delimiters_calculator.dart';
 import 'num_helper.dart';
 import 'point.dart';
 import 'extensions.dart';
+import 'user_types.dart';
 
 void main() {
   final delimiterCalc = DelimiterCalculator();
@@ -142,8 +143,8 @@ void main() {
   print(' ');
   print(' ');
 
-  // SEVENTh TASK
-  print('===== SEVENTh TASK =====');
+  // SEVENTH TASK
+  print('===== SEVENTH TASK =====');
   int degree = 3;
   double randomNum = 125;
   try {
@@ -155,6 +156,46 @@ void main() {
     print('Exception was thrown');
   }
 
-  print('===== SEVENTh TASK END =====');
-  // SEVENTh TASK END
+  print('===== SEVENTH TASK END =====');
+  // SEVENTH TASK END
+
+  print(' ');
+  print(' ');
+
+  // EIGHTH TASK
+  print('===== EIGHTH TASK =====');
+
+  final AdminUser newAdmin = AdminUser('james@gmail.com');
+  final UserManager hrAccount = UserManager();
+
+  // add users to manager's list
+  hrAccount.bulkAddUsers([
+    GeneralUser('test1@email.com'),
+    GeneralUser('test2@email.com'),
+    AdminUser('admin@gmail.com'),
+    GeneralUser('test3@email.com'),
+    GeneralUser('test4@email.com'),
+    GeneralUser('test5@email.com'),
+    AdminUser('admin@yandex.ru'),
+    GeneralUser('test6@email.com'),
+    GeneralUser('test7@email.com'),
+    User('test8@gmail.ru')
+  ]);
+
+  try {
+    String mailSys = newAdmin.getMailSystem();
+    print('Check mail system for ${newAdmin.email} \n $mailSys');
+
+    hrAccount.addUser(GeneralUser('johndoe@rambler.com'));
+    hrAccount.deleteUser('admin@yandex.ru');
+
+    hrAccount.listAllEmails();
+  } on ArgumentError catch (e) {
+    print(e.message);
+  } catch (e) {
+    print('Exception was thrown');
+  }
+
+  print('===== EIGHTH TASK END =====');
+  // EIGHTH TASK END
 }
